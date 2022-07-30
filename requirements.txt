@@ -10,3 +10,5 @@ shap==0.40.0
 ipykernel
 PyYAML
 dill
+six
+requests

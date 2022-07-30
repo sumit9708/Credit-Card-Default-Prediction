@@ -1,0 +1,35 @@
+columns:
+
+  CustomerID : int
+  SeriousDlqin2yrs : int
+  RevolvingUtilizationOfUnsecuredLines : float
+  age: int
+  NumberOfTime30-59DaysPastDueNotWorse : int
+  DebtRatio : float
+  MonthlyIncome : float
+  NumberOfOpenCreditLinesAndLoans : int
+  NumberOfTimes90DaysLate : int
+  NumberRealEstateLoansOrLines : int
+  NumberOfTime60-89DaysPastDueNotWorse : int
+  NumberOfDependents : float
+
+
+numerical_columns:
+  - CustomerID
+  - RevolvingUtilizationOfUnsecuredLines
+  - age
+  - NumberOfTime30-59DaysPastDueNotWorse
+  - DebtRatio
+  - MonthlyIncome
+  - NumberOfOpenCreditLinesAndLoans
+  - NumberOfTimes90DaysLate
+  - NumberRealEstateLoansOrLines
+  - NumberOfTime60-89DaysPastDueNotWorse
+  - NumberOfDependents
+
+#categorical_columns:
+  
+
+target_column :  SeriousDlqin2yrs
+
+    

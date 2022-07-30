@@ -1,13 +1,16 @@
 training_pipeline_config:
-  pipeline_name: credit_card_default_prediction
+  pipeline_name: default_prediction
   artifact_dir: artifact
 
 data_ingestion_config:
-  dataset_import_link: https://raw.githubusercontent.com/sumit9708/credit_card_dataset/main/cs-training.csv
-  raw_data_dir: raw_data
+  dataset_download_url: https://raw.githubusercontent.com/sumit9708/credit_card_dataset/main/cs-training.csv
+  raw_data_dir: raw_data1
+  preproceesed_dataset_dir : preprocessed_data
+  csv_download_dir: csv_data
   ingested_dir: ingested_data
   ingested_train_dir: train
   ingested_test_dir: test 
+
 
 data_validation_config:
   schema_dir : config

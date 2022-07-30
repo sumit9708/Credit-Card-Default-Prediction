@@ -34,3 +34,26 @@ def read_yaml_file(file_path:str)->dict:
             return yaml.safe_load(yaml_file)
     except Exception as e:
         raise ExceptionHandler(e,sys) from e
+
+def read_training_file(file_path:str):
+    try:
+        with open(file_path,"rb") as csv_file:
+            for training_file in csv_file:
+                if training_file == "cs-training.csv":
+                    return training_file
+    except Exception as e:
+        raise ExceptionHandler(e,sys) from e
+
+def load_numpy_array_data(file_path: str) -> np.array:
+    """
+    load numpy array data from file
+    file_path: str location of file to load
+    return: np.array data loaded
+    """
+    try:
+        with open(file_path, 'rb') as file_obj:
+            return np.load(file_obj)
+    except Exception as e:
+        raise ExceptionHandler(e, sys) from e
+
+column = ['CustomerID', 'RevolvingUtilizationOfUnsecuredLines', 'age', 'NumberOfTime30-59DaysPastDueNotWorse', 'DebtRatio', 'MonthlyIncome', 'NumberOfOpenCreditLinesAndLoans', 'NumberOfTimes90DaysLate', 'NumberRealEstateLoansOrLines', 'NumberOfTime60-89DaysPastDueNotWorse', 'NumberOfDependents','SeriousDlqin2yrs']
